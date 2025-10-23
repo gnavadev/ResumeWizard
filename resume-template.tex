@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,
+top=0.5in,
+bottom=0.5in,
+left=0.5in,
+right=0.5in]{geometry}
+                       
+\usepackage{XCharter}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\raggedright
+\pagestyle{empty}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Gabriel Nava} \\ \vspace{1pt}
+    Corvallis, OR \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ (541) 250-2664 ~ 
+    \href{mailto:gabrielnavactw@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{gabrielnavactw@gmail.com}} ~ 
+    \href{https://linkedin.com/in/gabriel-nava-8bb091208/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/gabriel-nava-dev}}  ~
+    \href{https://github.com/gnavadev}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/gnavadev}}
+    \vspace{-8pt}
+\end{center}
+
+\vspace{-12pt}
+
+\section*{Skills}
+\textbf{Languages:} Java, Python, C++, JavaScript, TypeScript\\
+\textbf{Backend:} Spring, Cassandra, Elasticsearch, Spark, data structures, cloud infrastructure\\
+\textbf{Frontend:} React, Redux\\
+\textbf{Tools:} GitHub, Gradle, Docker
+
+\vspace{-15pt}
+
+\section*{Education}
+\textbf{Oregon State University} -- B.S. in Computer Science \hfill Mar 2023 -- Jan 2027 \\
+Relevant Coursework: Data Structures, Algorithms, Cloud Infrastructure, Assembly Language, Mathematics
+
+\vspace{-15pt}
+
+\section*{Experience}
+\textbf{Software Engineer,} {Integritas} -- Austin, TX \hfill Sep 2023 -- Jul 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built backend RESTful APIs with \textbf{Java/Spring Boot and Python} handling 50,000+ requests/day
+  \item Designed cloud infrastructure on \textbf{AWS} with optimized \textbf{data structures} for real-time processing
+  \item Revamped \textbf{JavaScript/React and Redux} front-end, cutting load times by 47\% with efficient algorithms
+  \item Collaborated with cross-functional teams across product lifecycle from design to deployment via \textbf{GitHub}
+\end{itemize}
+
+\vspace{-4pt}
+
+\textbf{Software Engineer,} {SSYS Systems} -- Toledo, PR \hfill Sep 2022 -- Sep 2023 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built distributed backend systems using \textbf{Python, Java,} and \textbf{TypeScript} with \textbf{Spark} for large-scale data processing
+  \item Deployed cloud infrastructure on \textbf{AWS} integrating \textbf{Elasticsearch} and \textbf{Cassandra} for sub-second query performance
+  \item Developed front-end applications with \textbf{React, Redux, and Next.js}, improving data visualization
+  \item Automated CI/CD pipelines with \textbf{GitHub} Actions and \textbf{Gradle}, streamlining builds and deployments
+  \item Applied mathematics and optimization algorithms to reduce computational costs by 22\% in prediction models
+\end{itemize}
+
+\vspace{-4pt}
+
+\textbf{Software Engineer Intern,} {Biopark} -- Cascavel, PR \hfill Feb 2022 -- Sep 2022 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Enhanced \textbf{React/TypeScript} applications with advanced data structures, boosting performance by 24 points
+  \item Built containerized backend services with \textbf{Docker} and \textbf{GitHub}-based CI/CD pipelines
+  \item Designed database schemas with proper indexing and data structures supporting high-volume queries
+\end{itemize}
+
+\vspace{-25pt}
+
+\section*{Projects}
+\textbf{DataPurity MVP – Data Quality Scoring API} \hfill \textit{In Progress} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Building a \textbf{FastAPI} service that analyzes datasets (CSV/JSON) and generates quality scores
+  \item Implementing data cleaning metrics with \textbf{pandas, numpy, and scikit-learn} for automated quality assessment
+  \item Designing containerized deployment with \textbf{Docker} and CI/CD pipeline using \textbf{GitHub Actions}
+\end{itemize}
+
+\vspace{-4pt}
+
+\textbf{Interactive Post-It Board} \hfill \href{https://gnava-postit.vercel.app/}{gnava-postit.vercel.app} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built real-time drawing board with \textbf{Vue} and \textbf{Supabase} where visitors can create and view post-it notes
+  \item Implemented live cursor tracking and real-time updates using WebSocket connections
+  \item Converted drawings to Base64 strings for efficient storage and retrieval in \textbf{Supabase} database
+\end{itemize}
+
+\vspace{-4pt}
+
+\textbf{Hindsight – AI-Powered Desktop Assistant} \hfill \href{https://github.com/gnavadev/hindsight}{github.com/gnavadev/hindsight} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed context-aware AI desktop app using \textbf{Node.js, Electron and OpenCV} that analyzes screen content
+  \item Implemented screenshot capture, keyboard shortcuts, and real-time AI interaction for intelligent user assistance
+\end{itemize}
+\vspace{-25pt}
+
+\section*{Leadership / Extracurricular}
+\textbf{Technical Mentorship \& Open Source} -- Multiple Organizations \hfill Ongoing \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Mentored junior developers on \textbf{data structures, algorithms, Java, Python, and C++} through code reviews on \textbf{GitHub}
+  \item Created automation tools utilizing advanced mathematics and efficient backend architectures
+\end{itemize}
+
+\vspace{-25pt}
+
+\end{document}

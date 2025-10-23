@@ -1,0 +1,247 @@
+/* Global styles for the app */
+:root {
+  --color-bg: #1a1a1b;
+  --color-bg-light: #272728;
+  --color-bg-lighter: #3a3a3c;
+  --color-border: #4a4a4d;
+  --color-text: #d7dadc;
+  --color-text-dim: #818384;
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-danger: #ef4444;
+  --color-success: #22c55e;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  --radius: 8px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent body scroll */
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base components */
+button {
+  font-family: var(--font-family);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+button:disabled {
+  background-color: var(--color-bg-lighter);
+  color: var(--color-text-dim);
+  cursor: not-allowed;
+}
+
+textarea,
+input[type='text'] {
+  font-family: var(--font-family);
+  width: 100%;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  padding: 12px;
+  font-size: 14px;
+  box-sizing: border-box; /* Important for 100% width */
+}
+
+textarea:focus,
+input[type='text']:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+/* Layout */
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: var(--color-bg-light);
+  border-right: 1px solid var(--color-border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--color-text-dim);
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--color-bg-lighter);
+  color: var(--color-text);
+}
+
+.nav-link.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto; /* Allow content to scroll */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main UI */
+.main-ui-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  height: 100%;
+  flex: 1;
+}
+
+.job-description-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.job-description-col textarea {
+  flex: 1; /* Make textarea fill available space */
+  resize: none;
+  min-height: 200px;
+}
+
+.controls-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-bg-light);
+  padding: 16px;
+  border-radius: var(--radius);
+}
+
+.control-group h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+}
+
+.control-group button {
+  width: 100%;
+}
+
+.template-label {
+  font-size: 12px;
+  color: var(--color-text-dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-message {
+  padding: 12px;
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+
+.status-message.loading {
+  background-color: var(--color-bg-lighter);
+  border: 1px solid var(--color-border);
+}
+
+.status-message.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+}
+
+.status-message.success {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
+}
+
+/* Document Manager & Keywords */
+.document-list,
+.keywords-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.document-item,
+.keyword-item {
+  background-color: var(--color-bg-light);
+  padding: 16px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-border);
+}
+
+.document-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.document-item-info strong {
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.document-item-info span {
+  font-size: 14px;
+  color: var(--color-text-dim);
+}
+
+.keyword-item {
+  font-size: 14px;
+  padding: 12px 16px;
+}
+
+/* Settings */
+.settings-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
